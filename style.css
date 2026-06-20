@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #111827;
+}
+
+.container {
+    max-width: 480px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.live-ticker {
+    background: #f3f4f6;
+    color: #4b5563;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.ticker-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #10b981;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.brand-header {
+    padding: 40px 32px 24px;
+    text-align: center;
+}
+
+.brand-logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #cc0000;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bullseye-icon {
+    width: 28px;
+    height: 28px;
+    background: radial-gradient(circle, #cc0000 35%, #fff 38%, #cc0000 55%, #cc0000 100%);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.reward-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.reward-amount {
+    font-size: 56px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.1;
+    margin: 8px 0 24px;
+}
+
+.instruction-panel {
+    background: #ffffff;
+    padding: 0 32px;
+}
+
+.panel-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.step-idx {
+    width: 24px;
+    height: 24px;
+    background: #111827;
+    color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.action-container {
+    padding: 32px;
+}
+
+.primary-button {
+    display: block;
+    width: 100%;
+    background: #cc0000;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(204, 0, 0, 0.2);
+}
+
+.primary-button:hover {
+    background: #b30000;
+}
+
+.info-note {
+    text-align: center;
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 14px;
+}
+
+.social-proof {
+    border-top: 1px solid #e5e7eb;
+    background: #f9fafb;
+    padding: 24px 32px;
+}
+
+.review-card {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.reviewer-meta {
+    font-weight: 600;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.verified-badge {
+    color: #10b981;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.trust-metrics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px dashed #e5e7eb;
+}
+
+.right-metric {
+    text-align: right;
+}
+
+.metric-stars {
+    color: #f59e0b;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.metric-text {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.metric-strong {
+    color: #111827;
+    font-weight: 600;
+}
+
+.compliance-footer {
+    text-align: center;
+    padding: 24px 32px;
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    font-size: 11px;
+    color: #9ca3af;
+    line-height: 1.6;
+}
