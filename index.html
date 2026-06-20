@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reward Program – Promotional Offer</title>
-    <!-- External Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Link to Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <!-- Live Ticker -->
-        <div class="live-ticker">
+        <!-- Live Professional Notification Banner -->
+        <div class="notification-banner">
             <span class="ticker-dot"></span>
-            Lauren D. from Dallas, TX claimed a reward 22 min ago
+            <div class="notification-track">
+                <div class="notification-item active">Marcus K. from Chicago, IL claimed a $750 reward 3 mins ago</div>
+                <div class="notification-item">Sarah T. from Austin, TX claimed a $750 reward 12 mins ago</div>
+                <div class="notification-item">David L. from Miami, FL claimed a $750 reward 18 mins ago</div>
+                <div class="notification-item">Lauren D. from Dallas, TX claimed a $750 reward 22 mins ago</div>
+            </div>
         </div>
         
         <!-- Brand Header -->
@@ -29,25 +32,25 @@
             <div class="reward-amount">$750 Reward</div>
         </div>
         
-        <!-- Steps Panel -->
+        <!-- Redesigned Step Points (Requested Style) -->
         <div class="instruction-panel">
             <div class="panel-title">Required Process</div>
             <div class="step-list">
                 <div class="step-item">
                     <div class="step-idx">1</div>
-                    <div>Initiate application sequence below</div>
+                    <div class="step-text">Click The Button Below</div>
                 </div>
                 <div class="step-item">
                     <div class="step-idx">2</div>
-                    <div>Submit required baseline documentation</div>
+                    <div class="step-text">Enter Your Basic Info</div>
                 </div>
                 <div class="step-item">
                     <div class="step-idx">3</div>
-                    <div>Complete 3-5 promotional partner tasks</div>
+                    <div class="step-text">Complete 3-5 Deals</div>
                 </div>
                 <div class="step-item">
                     <div class="step-idx">4</div>
-                    <div>Receive distribution upon verification</div>
+                    <div class="step-text">Claim Your Reward</div>
                 </div>
             </div>
         </div>
@@ -55,37 +58,68 @@
         <!-- Action Button Section -->
         <div class="action-container">
             <a href="https://giftclick.org/aff_c?offer_id=1381&aff_id=148566" class="primary-button" target="_blank">
-                Claim Program Reward
+                Claim Your Gift Card &rarr;
             </a>
             <div class="info-note">No preliminary credit card validation required.</div>
         </div>
         
-        <!-- Social Proof Section -->
+        <!-- Expanded Social Proof & Vouch Comments -->
         <div class="social-proof">
-            <div class="review-card">
-                <div class="reviewer-meta">
-                    Brittany S. 
-                    <span class="verified-badge">✓ Verified Recipient</span>
-                </div>
-                "Successfully fulfilled the requirements. The processing time took roughly 48 hours to complete."
-            </div>
-            
-            <div class="trust-metrics">
+            <div class="social-header">
                 <div>
                     <div class="metric-stars">★★★★★</div>
                     <div class="metric-text"><span class="metric-strong">4.8/5</span> (2,341 Index Reviews)</div>
                 </div>
                 <div class="right-metric">
-                    <div class="metric-text" style="margin-bottom: 2px;"><span class="metric-strong">Secure Connection</span></div>
-                    <div class="metric-text">256-Bit SSL Encryption</div>
+                    <div class="verified-badge">✓ Verified Program</div>
+                </div>
+            </div>
+
+            <div class="review-stream">
+                <div class="review-card">
+                    <div class="reviewer-meta">
+                        <span>Brittany S.</span>
+                        <span class="review-time">2 days ago</span>
+                    </div>
+                    <p class="review-body">Completed the steps and got my $750 in 2 days! Honestly didn't think it would be this fast.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-meta">
+                        <span>Jason R.</span>
+                        <span class="review-time">3 days ago</span>
+                    </div>
+                    <p class="review-body">The deals take a little bit of time to complete perfectly, but the payout confirmation hits your inbox right away. Legit offer.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-meta">
+                        <span>Elena M.</span>
+                        <span class="review-time">4 days ago</span>
+                    </div>
+                    <p class="review-body">Vouching for this. Used my reward balance at Target this morning to restock my kitchen appliances.</p>
                 </div>
             </div>
         </div>
         
         <!-- Disclosures Footer -->
         <div class="compliance-footer">
-            This page represents an independent promotional aggregate program. Terms and conditional criteria apply to all participants. Must be 18 years of age or older. Registered trademarks are the property of their respective entities.
+            This page represents an independent promotional aggregate program. Terms and conditional criteria apply to all participants. Must be 18 years of age or older. Registered trademarks are the property of their respective entities. Secured with 256-Bit SSL Encryption.
         </div>
     </div>
+
+    <!-- Smooth Ticker Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const items = document.querySelectorAll('.notification-item');
+            let currentIdx = 0;
+
+            setInterval(() => {
+                items[currentIdx].classList.remove('active');
+                currentIdx = (currentIdx + 1) % items.length;
+                items[currentIdx].classList.add('active');
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
