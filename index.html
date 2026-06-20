@@ -11,7 +11,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Live Professional Notification Banner -->
         <div class="notification-banner">
             <span class="ticker-dot"></span>
             <div class="notification-track">
@@ -22,7 +21,6 @@
             </div>
         </div>
         
-        <!-- Brand Header -->
         <div class="brand-header">
             <div class="brand-logo">
                 <span class="bullseye-icon"></span>
@@ -32,7 +30,6 @@
             <div class="reward-amount">$750 Reward</div>
         </div>
         
-        <!-- Redesigned Step Points (Requested Style) -->
         <div class="instruction-panel">
             <div class="panel-title">Required Process</div>
             <div class="step-list">
@@ -55,7 +52,6 @@
             </div>
         </div>
         
-        <!-- Action Button Section -->
         <div class="action-container">
             <a href="https://giftclick.org/aff_c?offer_id=1381&aff_id=148566" class="primary-button" target="_blank">
                 Claim Your Gift Card &rarr;
@@ -63,14 +59,13 @@
             <div class="info-note">No preliminary credit card validation required.</div>
         </div>
         
-        <!-- Expanded Social Proof & Vouch Comments -->
         <div class="social-proof">
             <div class="social-header">
                 <div>
                     <div class="metric-stars">★★★★★</div>
                     <div class="metric-text"><span class="metric-strong">4.8/5</span> (2,341 Index Reviews)</div>
                 </div>
-                <div class="right-metric">
+                <div>
                     <div class="verified-badge">✓ Verified Program</div>
                 </div>
             </div>
@@ -78,7 +73,7 @@
             <div class="review-stream">
                 <div class="review-card">
                     <div class="reviewer-meta">
-                        <span>Brittany S.</span>
+                        <span class="reviewer-name">Brittany S.</span>
                         <span class="review-time">2 days ago</span>
                     </div>
                     <p class="review-body">Completed the steps and got my $750 in 2 days! Honestly didn't think it would be this fast.</p>
@@ -86,7 +81,7 @@
 
                 <div class="review-card">
                     <div class="reviewer-meta">
-                        <span>Jason R.</span>
+                        <span class="reviewer-name">Jason R.</span>
                         <span class="review-time">3 days ago</span>
                     </div>
                     <p class="review-body">The deals take a little bit of time to complete perfectly, but the payout confirmation hits your inbox right away. Legit offer.</p>
@@ -94,7 +89,7 @@
 
                 <div class="review-card">
                     <div class="reviewer-meta">
-                        <span>Elena M.</span>
+                        <span class="reviewer-name">Elena M.</span>
                         <span class="review-time">4 days ago</span>
                     </div>
                     <p class="review-body">Vouching for this. Used my reward balance at Target this morning to restock my kitchen appliances.</p>
@@ -102,13 +97,11 @@
             </div>
         </div>
         
-        <!-- Disclosures Footer -->
         <div class="compliance-footer">
             This page represents an independent promotional aggregate program. Terms and conditional criteria apply to all participants. Must be 18 years of age or older. Registered trademarks are the property of their respective entities. Secured with 256-Bit SSL Encryption.
         </div>
     </div>
 
-    <!-- Smooth Ticker Animation Script -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const items = document.querySelectorAll('.notification-item');
@@ -118,7 +111,7 @@
                 items[currentIdx].classList.remove('active');
                 currentIdx = (currentIdx + 1) % items.length;
                 items[currentIdx].classList.add('active');
-            }, 5000);
+            }, 4000); // Changes text every 4 seconds
         });
     </script>
 </body>
