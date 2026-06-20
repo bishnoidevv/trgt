@@ -70,8 +70,8 @@
                 </div>
             </div>
 
-            <div class="review-stream">
-                <div class="review-card">
+            <div class="review-stream-container">
+                <div class="review-card active">
                     <div class="reviewer-meta">
                         <span class="reviewer-name">Brittany S.</span>
                         <span class="review-time">2 days ago</span>
@@ -104,15 +104,22 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const items = document.querySelectorAll('.notification-item');
-            let currentIdx = 0;
+            // Live Ticker Rotator
+            const tickerItems = document.querySelectorAll('.notification-item');
+            let tickerIdx = 0;
 
             setInterval(() => {
-                items[currentIdx].classList.remove('active');
-                currentIdx = (currentIdx + 1) % items.length;
-                items[currentIdx].classList.add('active');
-            }, 4000); // Changes text every 4 seconds
-        });
-    </script>
-</body>
-</html>
+                tickerItems[tickerIdx].classList.remove('active');
+                tickerIdx = (tickerIdx + 1) % tickerItems.length;
+                tickerItems[tickerIdx].classList.add('active');
+            }, 4000);
+
+            // Single Vouch/Comment Rotator
+            const reviewCards = document.querySelectorAll('.review-card');
+            let reviewIdx = 0;
+
+            setInterval(() => {
+                reviewCards[reviewIdx].classList.remove('active');
+                reviewIdx = (reviewIdx + 1) % reviewCards.length;
+                reviewCards[reviewIdx].classList.add('active');
+            }, 50
