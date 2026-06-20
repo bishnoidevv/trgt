@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f9fafb;
+    background-color: #f3f4f6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,124 +19,150 @@ body {
     max-width: 480px;
     width: 100%;
     background: #ffffff;
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
     border: 1px solid #e5e7eb;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
 }
 
-.live-ticker {
-    background: #f3f4f6;
+/* Fixed Animated Notification Banner */
+.notification-banner {
+    background: #fafafa;
     color: #4b5563;
-    text-align: center;
-    padding: 10px 16px;
+    padding: 0 24px;
     font-size: 13px;
     font-weight: 500;
     border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    height: 50px; /* Constrained height */
+    overflow: hidden;
+}
+
+.notification-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.notification-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.notification-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ticker-dot {
+    width: 7px;
+    height: 7px;
+    background-color: #10b981;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 12px;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.brand-header {
+    padding: 36px 32px 24px;
+    text-align: center;
+}
+
+.brand-logo {
+    font-size: 32px;
+    font-weight: 900;
+    color: #cc0000;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
 }
 
-.ticker-dot {
-    width: 6px;
-    height: 6px;
-    background-color: #10b981;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.brand-header {
-    padding: 40px 32px 24px;
-    text-align: center;
-}
-
-.brand-logo {
-    font-size: 28px;
-    font-weight: 800;
-    color: #cc0000;
-    letter-spacing: -0.5px;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
 .bullseye-icon {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     background: radial-gradient(circle, #cc0000 35%, #fff 38%, #cc0000 55%, #cc0000 100%);
     border-radius: 50%;
     display: inline-block;
 }
 
 .reward-title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    color: #4b5563;
+    color: #6b7280;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 .reward-amount {
-    font-size: 56px;
-    font-weight: 700;
+    font-size: 58px;
+    font-weight: 800;
     color: #111827;
-    line-height: 1.1;
-    margin: 8px 0 24px;
+    line-height: 1;
+    margin: 6px 0 16px;
+    letter-spacing: -1px;
 }
 
 .instruction-panel {
     background: #ffffff;
-    padding: 0 32px;
+    padding: 0 36px;
 }
 
 .panel-title {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 700;
     color: #374151;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .step-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
 .step-item {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 14px 16px;
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #374151;
+    gap: 18px;
 }
 
 .step-idx {
-    width: 24px;
-    height: 24px;
-    background: #111827;
+    width: 34px;
+    height: 34px;
+    background: #cc0000;
     color: white;
-    border-radius: 6px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 700;
     flex-shrink: 0;
 }
 
+.step-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f2937;
+}
+
 .action-container {
-    padding: 32px;
+    padding: 32px 36px;
 }
 
 .primary-button {
@@ -144,18 +170,20 @@ body {
     width: 100%;
     background: #cc0000;
     color: white;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 18px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 50px;
     text-decoration: none;
-    transition: background-color 0.2s ease;
-    box-shadow: 0 4px 6px -1px rgba(204, 0, 0, 0.2);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(204, 0, 0, 0.25);
 }
 
 .primary-button:hover {
     background: #b30000;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(204, 0, 0, 0.35);
 }
 
 .info-note {
@@ -165,44 +193,66 @@ body {
     margin-top: 14px;
 }
 
+/* Fixed Distinct Vouch Card Streams */
 .social-proof {
     border-top: 1px solid #e5e7eb;
-    background: #f9fafb;
-    padding: 24px 32px;
+    background: #fafafa;
+    padding: 28px 36px;
 }
 
-.review-card {
-    font-size: 14px;
-    color: #4b5563;
-    line-height: 1.5;
+.social-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-.reviewer-meta {
-    font-weight: 600;
-    color: #111827;
+.review-stream {
     display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.review-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.reviewer-meta {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 6px;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #111827;
+}
+
+.review-time {
+    font-weight: 400;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.review-body {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
 }
 
 .verified-badge {
     color: #10b981;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.trust-metrics {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 16px;
-    border-top: 1px dashed #e5e7eb;
-}
-
-.right-metric {
-    text-align: right;
+    font-size: 13px;
+    font-weight: 600;
+    background: rgba(16, 185, 129, 0.08);
+    padding: 4px 10px;
+    border-radius: 20px;
 }
 
 .metric-stars {
@@ -223,7 +273,7 @@ body {
 
 .compliance-footer {
     text-align: center;
-    padding: 24px 32px;
+    padding: 24px 36px;
     background: #ffffff;
     border-top: 1px solid #e5e7eb;
     font-size: 11px;
